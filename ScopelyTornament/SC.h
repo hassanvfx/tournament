@@ -8,11 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "SCTournamentController.h"
-
+#import "AppDelegate.h"
 @interface SC : NSObject
 
 
 + (SCTournamentController *)tournament;
 + (SC *) manager;
-
++ (SCNavigationViewController *) navigationController;
 @end

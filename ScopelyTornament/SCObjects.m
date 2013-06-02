@@ -32,6 +32,7 @@
     self=[super init];
     if(self){
         _state = MATCH_UNDEFINED;
+        _type =MATCH_NORMAL;
     }
     return self;
 }

@@ -8,6 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
+
+typedef enum {
+    
+    
+    
+    ROUND_A    =      0,
+    ROUND_B    =      1,
+    
+} ROUNDS;
+
 typedef enum {
     
     
@@ -18,6 +28,17 @@ typedef enum {
     MATCH_WIN_TEAM_B   =      3
     
 } MATCH_STATE;
+
+
+typedef enum {
+    
+    
+    
+    MATCH_NORMAL    =      0,
+    MATCH_LOOSER    =      1,
+    MATCH_FINAL     =      2,
+    
+} MATCH_TYPE;
 
 
 typedef enum {
@@ -62,7 +83,11 @@ typedef enum {
 @property(strong,nonatomic)SCPlayer *playerB;
 @property(assign,nonatomic)MATCH_STATE state;
 @property(assign,nonatomic)int index;
-@property(assign,nonatomic)int nextMatch;
+@property(assign,nonatomic)int lap;
+@property(assign,nonatomic)ROUNDS round;
+@property(assign,nonatomic)BOOL finished;
+@property(assign,nonatomic)MATCH_TYPE type;
+
 
 @end
 

@@ -16,6 +16,10 @@
 
 @implementation SC
 
++ (SCNavigationViewController *) navigationController{
+    AppDelegate *delegate =[[UIApplication sharedApplication]delegate];
+    return delegate.navigationController;
+}
 + (SC *) manager{
     static dispatch_once_t pred;
     static SC *manager = nil;

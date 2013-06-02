@@ -37,6 +37,8 @@
 		260A5996175AB9C0009C34FE /* SCPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 260A5995175AB9C0009C34FE /* SCPlayerView.m */; };
 		260A5999175ABA86009C34FE /* SCMatchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 260A5998175ABA86009C34FE /* SCMatchView.m */; };
 		260A599F175AC870009C34FE /* UIAlertView+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 260A599E175AC870009C34FE /* UIAlertView+Blocks.m */; };
+		26DDFAF3175B531D00D24860 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26DDFAF2175B531D00D24860 /* QuartzCore.framework */; };
+		26DDFAF6175B55B300D24860 /* SCWInnerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26DDFAF5175B55B300D24860 /* SCWInnerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -95,6 +97,9 @@
 		260A5998175ABA86009C34FE /* SCMatchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCMatchView.m; sourceTree = "<group>"; };
 		260A599D175AC870009C34FE /* UIAlertView+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Blocks.h"; sourceTree = "<group>"; };
 		260A599E175AC870009C34FE /* UIAlertView+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Blocks.m"; sourceTree = "<group>"; };
+		26DDFAF2175B531D00D24860 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		26DDFAF4175B55B300D24860 /* SCWInnerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCWInnerViewController.h; sourceTree = "<group>"; };
+		26DDFAF5175B55B300D24860 /* SCWInnerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCWInnerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26DDFAF3175B531D00D24860 /* QuartzCore.framework in Frameworks */,
 				260A598C175A9D05009C34FE /* SystemConfiguration.framework in Frameworks */,
 				260A598A175A9CF2009C34FE /* MobileCoreServices.framework in Frameworks */,
 				260A58D7175A9458009C34FE /* UIKit.framework in Frameworks */,
@@ -116,6 +122,7 @@
 		260A58CA175A9457009C34FE = {
 			isa = PBXGroup;
 			children = (
+				26DDFAF2175B531D00D24860 /* QuartzCore.framework */,
 				260A598B175A9D05009C34FE /* SystemConfiguration.framework */,
 				260A5989175A9CF2009C34FE /* MobileCoreServices.framework */,
 				260A58DC175A9458009C34FE /* ScopelyTornament */,
@@ -237,6 +244,8 @@
 			children = (
 				260A5980175A9BE3009C34FE /* SCViewController.h */,
 				260A5981175A9BE3009C34FE /* SCViewController.m */,
+				26DDFAF4175B55B300D24860 /* SCWInnerViewController.h */,
+				26DDFAF5175B55B300D24860 /* SCWInnerViewController.m */,
 				260A597A175A9BC8009C34FE /* SCTournamentViewController.h */,
 				260A597B175A9BC8009C34FE /* SCTournamentViewController.m */,
 				260A5986175A9CAF009C34FE /* SCNavigationViewController.h */,
@@ -342,6 +351,7 @@
 				260A5996175AB9C0009C34FE /* SCPlayerView.m in Sources */,
 				260A5999175ABA86009C34FE /* SCMatchView.m in Sources */,
 				260A599F175AC870009C34FE /* UIAlertView+Blocks.m in Sources */,
+				26DDFAF6175B55B300D24860 /* SCWInnerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,6 +466,7 @@
 				260A58F8175A9458009C34FE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -8,6 +8,7 @@
 
 #import "SCMatchView.h"
 #import "AFNetworking.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface SCMatchView ()
 
@@ -40,6 +41,15 @@
         [self addSubview:self.button];
         
         
+        // border radius
+        [self.layer setCornerRadius:30.0f];
+        
+        // border
+        [self.layer setBorderColor:[UIColor lightGrayColor].CGColor];
+        [self.layer setBorderWidth:1.5f];
+        
+        self.clipsToBounds=YES;
+        
         // Initialization code
     }
     return self;
@@ -54,6 +64,45 @@
 -(void)update{
 
     if (self.match) {
+        
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            [UIView animateWithDuration:0.5 animations:^{
+                
+                self.playerA.alpha=0.0;
+                self.playerB.alpha=0.0;
+                self.backgroundColor=[UIColor clearColor];
+                switch (self.match.state) {
+                    case MATCH_UNDEFINED:
+                        
+                        self.playerA.alpha=0.25;
+                        self.playerB.alpha=0.25;
+                        self.backgroundColor=[UIColor clearColor];
+                        
+                        break;
+                    case MATCH_IDLE:
+                        self.playerA.alpha=1.0;
+                        self.playerB.alpha=1.0;
+                        self.backgroundColor=[UIColor whiteColor];
+                        break;
+                    case MATCH_WIN_TEAM_A:
+                        self.playerA.alpha=0.75;
+                        self.playerB.alpha=0.15;
+                        self.backgroundColor=[UIColor lightGrayColor];
+                        break;
+                    case MATCH_WIN_TEAM_B:
+                        
+                        self.playerA.alpha=0.15;
+                        self.playerB.alpha=0.75;
+                        self.backgroundColor=[UIColor lightGrayColor];
+                        break;
+                    default:
+                        break;
+                }
+            }];
+        });
+        
         if(self.match.playerA){
             if(self.match.playerA.name){
 
@@ -69,6 +118,10 @@
                                                                      
                                                                      dispatch_async(dispatch_get_main_queue(), ^{
                                                                          [me.playerA.imageView setImage:image];
+                                                                         me.playerA.imageView.alpha=0.0;
+                                                                         [UIView animateWithDuration:0.5 animations:^{
+                                                                             me.playerA.imageView.alpha=1.0;
+                                                                         }];
                                                                      });
                                                                      
                                                                      return image;
@@ -101,6 +154,10 @@
                                                                       
                                                                       dispatch_async(dispatch_get_main_queue(), ^{
                                                                           [me.playerB.imageView setImage:image];
+                                                                          me.playerB.imageView.alpha=0.0;
+                                                                          [UIView animateWithDuration:0.5 animations:^{
+                                                                              me.playerB.imageView.alpha=1.0;
+                                                                          }];
                                                                       });
                                                                       
                                                                       return image;

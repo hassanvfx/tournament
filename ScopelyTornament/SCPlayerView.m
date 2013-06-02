@@ -27,12 +27,13 @@
         rect.size.width =frame.size.width*0.3;
         rect.size.height=frame.size.height;
         
-        self.imageView.frame=rect;
+        self.imageView.frame=CGRectInset(rect, UI_MIN_SPACE, UI_MIN_SPACE);
         self.imageView.contentMode=UIViewContentModeScaleAspectFit;
+        self.imageView.backgroundColor=[UIColor whiteColor];
         rect.origin.x=rect.size.width;
         
         rect.size.width=frame.size.width*0.7;
-        self.label.frame=rect;
+        self.label.frame=CGRectInset(rect, UI_MIN_SPACE, UI_MIN_SPACE);;
         self.label.text=@"Coming soon";
         
         [self addSubview:self.imageView];
