@@ -87,15 +87,15 @@
                         self.backgroundColor=[UIColor whiteColor];
                         break;
                     case MATCH_WIN_TEAM_A:
-                        self.playerA.alpha=0.75;
+                        self.playerA.alpha=1.0;
                         self.playerB.alpha=0.15;
-                        self.backgroundColor=[UIColor lightGrayColor];
+                        self.backgroundColor=[UIColor whiteColor];
                         break;
                     case MATCH_WIN_TEAM_B:
                         
                         self.playerA.alpha=0.15;
-                        self.playerB.alpha=0.75;
-                        self.backgroundColor=[UIColor lightGrayColor];
+                        self.playerB.alpha=1.00;
+                        self.backgroundColor=[UIColor whiteColor];
                         break;
                     default:
                         break;

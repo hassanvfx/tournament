@@ -44,6 +44,9 @@
                                                                     style:UIBarButtonItemStyleDone target:self action:@selector(help)];
     
     self.navigationItem.rightBarButtonItem= leftButton;
+    
+    
+    [self displayTournament];
 }
 
 - (void)viewDidLoad
@@ -51,9 +54,9 @@
     
     
     [super viewDidLoad];
-    self.view.backgroundColor =[UIColor lightGrayColor];
+    self.view.backgroundColor =[UIColor blackColor];
 	// Do any additional setup after loading the view.
-    [self displayTournament];
+    
 }
 
 - (void)didReceiveMemoryWarning

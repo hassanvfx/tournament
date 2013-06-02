@@ -16,7 +16,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     
-    
+    [[UINavigationBar appearance] setTintColor:[UIColor blackColor]];
+    [[UIBarButtonItem appearance] setTintColor:[UIColor blackColor]] ;
     [[UIApplication sharedApplication]setStatusBarHidden:YES withAnimation:YES];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];

@@ -217,6 +217,7 @@
 -(void)setWinner:(MATCH_STATE)state forLooserMatch:(SCMatch*)match{
     
     match.state=state;
+    match.finished=YES;
     int matchIndex=match.index;
     int lap =( (match.lap-1)*2.0) +match.round;
     
@@ -255,6 +256,7 @@
     if(match==self.finalA){
         
         self.finalA.finished=YES;
+        self.finalA.state=state;
         self.finalB.playerA =self.finalA.playerB;
         self.finalB.playerB =self.finalA.playerA;
         self.finalB.state=MATCH_IDLE;
